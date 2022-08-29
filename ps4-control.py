@@ -21,37 +21,31 @@ class MyController(Controller):
     def __int__(self, **kwargs):
         Controller.__init__(self, **kwargs)
 
-    def on_L3_up(self, name):
+    def on_up_arrow_press(self):
         lf.start(speed)
         lb.start(0)
         rf.start(speed)
         rb.start(0)
 
-    def on_L3_down(self, name):
+    def on_down_arrow_press(self):
         rf.start(0)
         rb.start(speed)
         lf.start(0)
         lb.start(speed)
 
-    def on_L3_left(self, name):
-        lf.start(0)
-        lb.start(speed)
-        rf.start(speed)
-        rb.start(0)
-
-    def on_L3_right(self, name):
+    def on_left_arrow_press(self):
         lf.start(speed)
         lb.start(0)
         rf.start(0)        
         rb.start(speed)
 
-    def on_L3_x_at_rest(self):
+    def on_right_arrow_press(self):
         lf.start(0)
-        lb.start(0)
-        rf.start(0)
+        lb.start(speed)
+        rf.start(speed)
         rb.start(0)
-        
-    def on_L3_y_at_rest(self):
+
+    def on_x_press(self):
         lf.start(0)
         lb.start(0)
         rf.start(0)
